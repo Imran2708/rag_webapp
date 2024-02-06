@@ -1,0 +1,85 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f6;
+  }
+  
+  /* Header */
+  .streamlit-header {
+    background-color: #333333;
+    color: white;
+    padding: 1rem;
+  }
+  
+  /* Main content */
+  .streamlit-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Text elements */
+  .streamlit-text {
+    color: #333333;
+    font-size: 14px;
+  }
+  
+  /* Buttons */
+  .stButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .stButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Input fields */
+  .stInput > input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+  
+  /* Selectboxes */
+  .stSelectbox .selectbox-container {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    padding: 0.5rem;
+  }
+  
+  .stSelectbox .selectbox-container:hover {
+    border-color: #007bff;
+  }
+  
+  /* Sliders */
+  .stSlider .slider-container {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    padding: 0.5rem;
+  }
+  
+  .stSlider .slider-container:hover {
+    border-color: #007bff;
+  }
+  
+  /* Toggles */
+  .stToggle .toggle-container {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    padding: 0.5rem;
+  }
+  
+  .stToggle .toggle-container:hover {
+    border-color: #007bff;
+  }
+  

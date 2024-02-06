@@ -1,0 +1,17 @@
+#python --> 3.11.7
+
+streamlit
+langchain
+langchain_community
+transformers
+streamlit-chat
+#conda install -c conda-forge sentencepiece
+#sentencepiece 
+sentence-transformers
+accelerate
+torch
+pypdf
+#conda install faiss-cpu -c pytorch
+faiss-cpu  
+#PyPDF2
+pdfplumber
