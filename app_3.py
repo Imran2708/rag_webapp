@@ -5,6 +5,7 @@ import transformers
 import accelerate
 import json
 import textwrap
+import PyPDF2
 from typing import Set
 from streamlit_chat import message
 from typing import Any, List, Dict
@@ -140,8 +141,17 @@ def generate(text):
         final_outputs = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
         final_outputs = cut_off_text(final_outputs, '</s>')
         final_outputs = remove_substring(final_outputs, prompt)
-
+        print("Before:", final_outputs)
+        final_outputs = generate_with_page(final_outputs, page_texts, path_in)
+        print("\nAfter:\n", final_outputs)
     return final_outputs
+
+def generate_with_page(text, page_texts, pdf_path):
+  # Existing page lookup code
+  page_num = get_page_number(text, page_texts)  
+  if page_num:
+    return f"{text} (Page {page_num})"  
+  return text
 
 def parse_text(text):
         wrapped_text = textwrap.fill(text, width=100)
@@ -150,15 +160,15 @@ def parse_text(text):
 def pdf_chat(path):
     # print("pdf read done")
     pass
+
 def ans_ret(query,new_vectorstore,chat_history):
     llm=st.session_state["model"]
     
     qa = ConversationalRetrievalChain.from_llm(
        llm=llm, retriever=new_vectorstore.as_retriever()
     )
-      
     res=qa.invoke({"question": query, "chat_history":chat_history})
-    
+      
     return res
 
 
@@ -174,7 +184,7 @@ if prompt and path_in:
     
         st.session_state["user_prompt_history"].append(prompt)
         st.session_state["chat_answers_history"].append(generated_response["answer"])
-        st.session_state["chat_history"].append((prompt,generated_response["answer"]))          
+        st.session_state["chat_history"].append((prompt,generated_response["answer"]))
         
 if st.session_state["chat_answers_history"]:
     max_len = min(len(st.session_state["chat_answers_history"]), len(st.session_state["user_prompt_history"]))
@@ -183,5 +193,4 @@ if st.session_state["chat_answers_history"]:
         gresponse = st.session_state["chat_answers_history"][i]
         message(user_query, is_user=True, key=i)
         message(gresponse, key=f"response_{i}")
-        #message(gresponse, key=f"response_{i}_user")  # For user messages
-        #message(gresponse, key=f"response_{i}_system")  # For system responses
+
