@@ -1,0 +1,19 @@
+1. Gen AI --> https://github.com/genieincodebottle/generative-ai/tree/main
+
+2. RAG-chatbot.ipynb  --> https://github.com/pinecone-io/examples/blob/master/learn/generation/langchain/rag-chatbot.ipynb
+
+3. Using LLaMA 2.0, FAISS and LangChain for Question-Answering on Your Own Data --> https://medium.com/@murtuza753/using-llama-2-0-faiss-and-langchain-for-question-answering-on-your-own-data-682241488476
+
+4. github link to download model after registering for "meta-llama2" model --> https://github.com/facebookresearch/llama
+
+5. Chat-with-pdf-using-LLM-langchain-and-streamlit -> https://github.com/shahidul034/Chat-with-pdf-using-LLM-langchain-and-streamlit
+
+6. Building an AI-Powered ‘Chat with PDF’ App with Streamlit, LangChain, FAISS and LLaMA2 --> https://medium.com/@gaurav.jaik86/building-an-ai-powered-chat-with-pdf-app-with-streamlit-langchain-faiss-and-llama2-affadea65737
+
+7. Context-aware chatbot using Llama 2 & lanceDB serverless vector database --> https://blog.lancedb.com/context-aware-chatbot-using-llama-2-lancedb-as-vector-database-4d771d95c755
+
+8. panel-chat-examples  --> https://github.com/holoviz-topics/panel-chat-examples/tree/add_llama
+
+9. How to Build a Retrieval-Augmented Generation Chatbot  --> https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot
+
+

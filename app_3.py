@@ -165,7 +165,7 @@ def ans_ret(query,new_vectorstore,chat_history):
     llm=st.session_state["model"]
     
     qa = ConversationalRetrievalChain.from_llm(
-       llm=llm, retriever=new_vectorstore.as_retriever()
+       llm=llm, retriever=new_vectorstore.as_retriever(), return_source_documents=True
     )
     res=qa.invoke({"question": query, "chat_history":chat_history})
       
