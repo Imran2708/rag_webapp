@@ -16,4 +16,4 @@
 
 9. How to Build a Retrieval-Augmented Generation Chatbot  --> https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot
 
-
+10. my main code link --> https://github.com/shahidul034/Chat-with-pdf-using-LLM-langchain-and-streamlit
