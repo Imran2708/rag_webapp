@@ -10,7 +10,7 @@ streamlit-chat
 #sentencepiece 
 sentence-transformers
 accelerate
-torch
+torch==2.0.0
 pypdf
 #conda install faiss-cpu -c pytorch
 faiss-cpu  

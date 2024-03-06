@@ -57,7 +57,7 @@ if "user_prompt_history" not in st.session_state:
     st.session_state["user_prompt_history"] = []
 
 if "model" not in st.session_state:    
-    model_id = 'meta-llama/Llama-2-7b-chat-hf'
+    model_id = 'mistralai/Mistral-7B-Instruct-v0.2'
     hf_auth = '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'
     tokenizer = AutoTokenizer.from_pretrained(model_id,
                                           token=hf_auth,)
