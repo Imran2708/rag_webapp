@@ -58,7 +58,7 @@ if "user_prompt_history" not in st.session_state:
 
 if "model" not in st.session_state:    
     model_id = 'mistralai/Mistral-7B-Instruct-v0.2'
-    hf_auth = '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'
+    hf_auth = 'xxxxxx'
     tokenizer = AutoTokenizer.from_pretrained(model_id,
                                           token=hf_auth,)
 
